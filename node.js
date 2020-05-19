@@ -14,6 +14,7 @@ module.exports = function (RED) {
             var body;
             var data = {
                 from: config.from || msg.from,
+                fromname: config.fromname || msg.fromname,
                 to: (to => Array.isArray(to) ? to : to.split(/[,; ]+/g))(msg.to || config.to || ''),
                 cc: (msg.cc || '').split(/[,; ]+/g),
                 bcc: (msg.bcc || '').split(/[,; ]+/g),
